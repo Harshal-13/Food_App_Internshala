@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/itemRatingL"
+        android:title="Sort Rating(L to H)"
+        android:icon="@drawable/ic_home" />
+
+    <item
+        android:id="@+id/itemRatingH"
+        android:title="Sort Rating(H to L)"
+        android:icon="@drawable/ic_profile"/>
+
+    <item
+        android:id="@+id/itemPriceL"
+        android:title="Sort Price(L to H)"
+        android:icon="@drawable/ic_fav"/>
+
+    <item
+        android:id="@+id/itemPriceH"
+        android:title="Sort Price(H to L)"
+        android:icon="@drawable/ic_fav"/>
+
+</menu>

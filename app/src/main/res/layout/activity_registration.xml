@@ -37,7 +37,8 @@
         android:layout_marginTop="40dp"
         android:layout_marginRight="15dp"
         android:background="#fff"
-        android:hint="Name (Min 3 characters)"
+        android:hint=" Name (Min 3 characters)"
+        android:drawableStart="@drawable/ic_profile"
         android:inputType="textPersonName"
         android:maxLines="1"
         android:minEms="3"
@@ -55,7 +56,8 @@
         android:padding="6dp"
         android:inputType="textEmailAddress"
         android:background="#fff"
-        android:hint="Email Address"/>
+        android:hint=" Email Address"
+        android:drawableStart="@drawable/ic_email"/>
 
     <EditText
         android:id="@+id/etMobileNumber"
@@ -70,7 +72,8 @@
         android:maxLength="10"
         android:padding="6dp"
         android:background="#fff"
-        android:hint="Mobile Number(10 digits)"/>
+        android:hint=" Mobile Number(10 digits)"
+        android:drawableStart="@drawable/ic_numpad"/>
 
     <EditText
         android:id="@+id/etAddress"
@@ -84,7 +87,8 @@
         android:padding="6dp"
         android:inputType="textPostalAddress"
         android:background="#fff"
-        android:hint="Delivery Address"/>
+        android:hint=" Delivery Address"
+        android:drawableStart="@drawable/ic_home"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -99,7 +103,8 @@
         android:maxLength="10"
         android:padding="6dp"
         android:background="#fff"
-        android:hint="Password (min 4 characters)"/>
+        android:hint=" Password (min 4 characters)"
+        android:drawableStart="@drawable/ic_pass"/>
 
     <EditText
         android:id="@+id/etConfirmPwd"
@@ -113,7 +118,8 @@
         android:padding="6dp"
         android:inputType="textPassword"
         android:background="#fff"
-        android:hint="Enter Email Address"/>
+        android:hint=" Confirm Password"
+        android:drawableStart="@drawable/ic_pass"/>
 
     <Button
         android:id="@+id/btnNext"

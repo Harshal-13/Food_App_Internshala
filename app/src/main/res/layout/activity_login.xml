@@ -30,7 +30,8 @@
         android:maxLength="10"
         android:padding="6dp"
         android:background="#fff"
-        android:hint="Mobile Number(10 digits)"/>
+        android:hint=" Mobile Number(10 digits)"
+        android:drawableStart="@drawable/ic_numpad"/>
 
     <EditText
         android:id="@+id/etPassword"
@@ -44,7 +45,8 @@
         android:padding="6dp"
         android:inputType="textPassword"
         android:background="#fff"
-        android:hint="Enter Password"/>
+        android:hint=" Enter Password"
+        android:drawableStart="@drawable/ic_pass"/>
 
     <Button
         android:id="@+id/btnLogin"
@@ -77,6 +79,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Don't have an account? Sign up now"
+        android:textSize="16dp"
         android:textColor="#fff"
         android:padding="6dp"
         android:layout_alignParentBottom="true"

@@ -5,18 +5,17 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.MenuItem
 import android.widget.FrameLayout
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import com.harshal.internshalatrainingsproject.*
-import com.harshal.internshalatrainingsproject.fragment.FAQsFragment
-import com.harshal.internshalatrainingsproject.fragment.FavouritesFragment
-import com.harshal.internshalatrainingsproject.fragment.HomeFragment
-import com.harshal.internshalatrainingsproject.fragment.ProfileFragment
+import com.harshal.internshalatrainingsproject.fragment.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -83,6 +82,16 @@ class MainActivity : AppCompatActivity() {
                     supportActionBar?.title = "Favourite Restaurants"
                     drawerLayout.closeDrawers()
                 }
+                R.id.itemHistory -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(
+                            R.id.frame,
+                            HistoryFragment()
+                        )
+                        .commit()
+                    supportActionBar?.title = "Order History"
+                    drawerLayout.closeDrawers()
+                }
                 R.id.itemFAQs -> {
                     supportFragmentManager.beginTransaction()
                         .replace(
@@ -94,10 +103,20 @@ class MainActivity : AppCompatActivity() {
                     drawerLayout.closeDrawers()
                 }
                 R.id.itemLogout -> {
-                    sharedPreferences.edit().clear().apply()
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
-                    finish()
+
+                    val dialog = AlertDialog.Builder(this)
+                    dialog.setTitle("Confirmation")
+                    dialog.setMessage("Are you sure you want to logout ?")
+                    dialog.setPositiveButton("Yes"){text, listener ->
+                        sharedPreferences.edit().clear().apply()
+                        val intent = Intent(this, LoginActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    }
+                    dialog.setNegativeButton("Cancel"){text, listener ->
+
+                    }
+                    dialog.create().show()
                 }
             }
             return@setNavigationItemSelectedListener true
@@ -134,5 +153,10 @@ class MainActivity : AppCompatActivity() {
             !is HomeFragment -> openHome()
             else -> super.onBackPressed()
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        finish()
     }
 }

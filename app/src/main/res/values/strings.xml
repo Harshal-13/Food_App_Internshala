@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Internshala Trainings Project</string>
+    <string name="app_name">Food App</string>
     <string name="preference_file_name">Shared Preferences</string>
     <string name="next">Next</string>
     <string name="open_drawer">Open Drawer</string>

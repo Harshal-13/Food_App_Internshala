@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="4dp">
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeLayout"
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:orientation="horizontal"
@@ -21,7 +30,8 @@
         android:layout_width="0dp"
         android:layout_height="110dp"
         android:src="@mipmap/ic_launcher"
-        android:padding="5dp"/>
+        android:padding="5dp"
+        android:scaleType="centerCrop"/>
 
     <RelativeLayout
         android:layout_weight="3.4"
@@ -35,7 +45,8 @@
             android:text="Name of the book"
             android:padding="8dp"
             android:layout_marginTop="10dp"
-            android:textSize="18sp"
+            android:textSize="15sp"
+            android:textStyle="bold"
             android:textColor="#000000"/>
 
         <TextView
@@ -79,10 +90,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_heart_border"
             android:padding="8dp"
+            android:scaleType="centerCrop"
             android:textSize="15sp"
             android:layout_marginTop="10dp"/>
 
     </RelativeLayout>
 
 </LinearLayout>
+</androidx.cardview.widget.CardView>

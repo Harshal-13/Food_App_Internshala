@@ -18,6 +18,11 @@
             android:icon="@drawable/ic_fav"/>
 
         <item
+            android:id="@+id/itemHistory"
+            android:title="Order History"
+            android:icon="@drawable/ic_history"/>
+
+        <item
             android:id="@+id/itemFAQs"
             android:title="FAQs"
             android:icon="@drawable/ic_faq"/>

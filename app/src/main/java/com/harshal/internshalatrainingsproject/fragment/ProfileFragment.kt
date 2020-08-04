@@ -1,10 +1,13 @@
 package com.harshal.internshalatrainingsproject.fragment
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import com.harshal.internshalatrainingsproject.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,8 +22,14 @@ import com.harshal.internshalatrainingsproject.R
  */
 class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+//    private var param1: String? = null
+//    private var param2: String? = null
+//
+    lateinit var name : Button
+    lateinit var email : Button
+    lateinit var number: Button
+    lateinit var address : Button
+    lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +44,20 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+
+        sharedPreferences = activity?.getSharedPreferences(getString(R.string.preference_file_name), Context.MODE_PRIVATE)!!
+        name = view.findViewById(R.id.btnName)
+        email = view.findViewById(R.id.btnEmail)
+        number = view.findViewById(R.id.btnNumber)
+        address = view.findViewById(R.id.btnAddress)
+
+        name.setText(sharedPreferences.getString("name","Name"))
+        email.setText(sharedPreferences.getString("email","Email Address"))
+        number.setText(sharedPreferences.getString("mobile_number","Mobile Number"))
+        address.setText(sharedPreferences.getString("address","Address"))
+
+        return view
     }
 
     companion object {
