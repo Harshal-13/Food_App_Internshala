@@ -5,17 +5,17 @@
 ![Main Home Page](https://github.com/Harshal-13/Food_App_Internshala/blob/master/app/src/main/res/app-images/home-screen.jpg)
 
 ## Main Features
-- [Splash & Login Page](#login)
-- [Registration](#register)
-- [Forgot Password](#password)
-- [Drawer Menu](#drawer)
+- [Splash & Login Page](#splash-and-login-page)
+- [Registration](#registration-page)
+- [Forgot Password](#forgot-password-page)
+- [Drawer Menu](#navigation-drawer)
 - [Profile](#profile)
-- [Favourites](#fav)
-- [Order History](#history)
-- [Restaurant Page](#description)
-- [Cart & Confirmation](#cart)
+- [Favourites](#favourites)
+- [Order History](#order-history)
+- [Restaurant Page](#restaurant-description)
+- [Cart & Confirmation](#cart--confirmation)
 - [FAQ](#faq)
-- [Logout](#logout)
+- [Logout](#logout-confirmation)
 
 ### Splash and Login Page
 ![Login](https://github.com/Harshal-13/Food_App_Internshala/blob/master/app/src/main/res/app-images/splash_page.jpg)(https://github.com/Harshal-13/Food_App_Internshala/blob/master/app/src/main/res/app-images/login.jpg)
