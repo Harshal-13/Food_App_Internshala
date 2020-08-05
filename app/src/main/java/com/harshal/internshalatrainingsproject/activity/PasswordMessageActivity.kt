@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -23,6 +24,7 @@ class PasswordMessageActivity : AppCompatActivity() {
     lateinit var password: TextView
     lateinit var cnfpwd : TextView
     lateinit var nextBtn : Button
+    lateinit var backBtn : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,7 @@ class PasswordMessageActivity : AppCompatActivity() {
         password = findViewById(R.id.etPassword)
         cnfpwd = findViewById(R.id.etCnfPassword)
         nextBtn = findViewById(R.id.btnNext)
+        backBtn = findViewById(R.id.imgBackArrow)
 
         nextBtn.setOnClickListener {
             val otpText = otp.text.toString()
@@ -97,6 +100,11 @@ class PasswordMessageActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Passwords don't match!",Toast.LENGTH_SHORT).show()
             }
+        }
+
+        backBtn.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
     }
 }

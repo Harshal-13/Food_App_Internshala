@@ -58,7 +58,7 @@ class DescriptionActivity : AppCompatActivity() {
         if(intent != null){
             restaurantId = intent.getStringExtra("id")
             restaurantName = intent.getStringExtra("name")
-            title = intent.getStringExtra("name")
+            toolbar.title = intent.getStringExtra("name")
             restaurantEntity = RestaurantEntity(
                 restaurantId = intent.getStringExtra("id")!!,
                 restaurantName = intent.getStringExtra("name")!!,
